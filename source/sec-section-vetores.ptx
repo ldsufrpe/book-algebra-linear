@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-section-vetores" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Vetores</title>
+
+  <introduction>
+    <p>Vetores são objetos matemáticos que possuem tanto magnitude quanto direção. São usados amplamente em várias áreas da matemática, física, e engenharia para representar quantidades como força, velocidade e deslocamento.</p>
+  </introduction>
+  
+  <subsection xml:id="subsec-definicoes">
+    <title>Definições</title>
+    
+    <p>Um vetor é representado por uma flecha que aponta na direção desejada, onde o comprimento da flecha representa a magnitude do vetor.</p>
+    
+    <p>Vetores podem ser denotados por coordenadas. Por exemplo, o vetor <m>\vec{v} = (x, y)</m> no plano cartesiano possui componentes <m>x</m> e <m>y</m>, que representam suas projeções nos eixos <m>x</m> e <m>y</m>, respectivamente.</p>
+  </subsection>
+  
+  <subsection xml:id="subsec-operacoes">
+    <title>Operações com Vetores</title>
+    
+    <p>Algumas operações básicas com vetores incluem:</p>
+    
+    <ul>
+      <li>
+        <p><term>Adição de Vetores</term>: Dados dois vetores <m>\vec{a} = (a_x, a_y)</m> e <m>\vec{b} = (b_x, b_y)</m>, sua soma é dada por <m>\vec{a} + \vec{b} = (a_x + b_x, a_y + b_y)</m>.</p>
+      </li>
+      <li>
+        <p><term>Multiplicação por Escalar</term>: Dado um vetor <m>\vec{v} = (x, y)</m> e um escalar <m>k</m>, o vetor escalado é <m>k \cdot \vec{v} = (k \cdot x, k \cdot y)</m>.</p>
+      </li>
+      <li>
+        <p><term>Produto Escalar</term>: Dados dois vetores <m>\vec{a} = (a_x, a_y)</m> e <m>\vec{b} = (b_x, b_y)</m>, o produto escalar é <m>\vec{a} \cdot \vec{b} = a_x \cdot b_x + a_y \cdot b_y</m>.</p>
+      </li>
+    </ul>
+
+    <figure xml:id="figure-tikz-vectors">
+      <caption>Representação de Vetores em Duas Dimensões</caption>
+      <image width="50%" xml:id="tikz-vectors">
+          <shortdescription>
+              Representação de dois vetores e sua soma em um sistema de coordenadas.
+          </shortdescription>
+          <latex-image>
+  
+          \begin{tikzpicture}
+              % Configuração dos eixos
+              \draw[->] (-1,0) -- (4,0) node[right] {$x$};
+              \draw[->] (0,-1) -- (0,4) node[above] {$y$};
+              
+              % Definindo os vetores
+              \coordinate (A) at (2, 1); % Vetor a
+              \coordinate (B) at (1, 3); % Vetor b
+              \coordinate (C) at (3, 4); % Vetor a + b
+              
+              % Desenhando os vetores
+              \draw[->, thick, blue] (0,0) -- (A) node[midway, below] {$\vec{a}$};
+              \draw[->, thick, red] (0,0) -- (B) node[midway, left] {$\vec{b}$};
+              \draw[->, thick, purple] (0,0) -- (C) node[midway, right] {$\vec{a} + \vec{b}$};
+  
+              % Linhas auxiliares para formar o paralelogramo
+              \draw[dashed, gray] (A) -- (C);
+              \draw[dashed, gray] (B) -- (C);
+  
+              % Ponto de origem
+              \node at (0,0) [below left] {O};
+          \end{tikzpicture}
+  
+          </latex-image>
+      </image>
+  </figure>
+  
+  </subsection>
+  
+  <example xml:id="ex-vetores-operacoes">
+    <title>Exemplo de Operações com Vetores</title>
+    
+    <p>Considere os vetores <m>\vec{a} = (2, 3)</m> e <m>\vec{b} = (1, 4)</m>. Vamos realizar algumas operações básicas:</p>
+    
+    <ul>
+      <li><p><strong>Adição de Vetores:</strong> <m>\vec{a} + \vec{b} = (2 + 1, 3 + 4) = (3, 7)</m></p></li>
+      <li><p><strong>Multiplicação por Escalar:</strong> Se multiplicarmos o vetor <m>\vec{a}</m> por 2, obtemos <m>2 \cdot \vec{a} = 2 \cdot (2, 3) = (4, 6)</m>.</p></li>
+      <li><p><strong>Produto Escalar:</strong> O produto escalar dos vetores é <m>\vec{a} \cdot \vec{b} = 2 \cdot 1 + 3 \cdot 4 = 2 + 12 = 14</m>.</p></li>
+    </ul>
+  </example>
+  
+
+</section>
